@@ -1,0 +1,21 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sun 2024-07-07 20:18:23 -03; 17min ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 92259 (dockerd)
+      Tasks: 10
+     Memory: 35.0M
+     CGroup: /system.slice/docker.service
+             └─92259 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.162950852-03:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.211840097-03:00" level=info msg="Loading containers: done."
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.268962940-03:00" level=warning msg="WARNING: No blkio throttle.read_bps_device support"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.269071648-03:00" level=warning msg="WARNING: No blkio throttle.write_bps_device support"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.269096850-03:00" level=warning msg="WARNING: No blkio throttle.read_iops_device support"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.269112051-03:00" level=warning msg="WARNING: No blkio throttle.write_iops_device support"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.269158954-03:00" level=info msg="Docker daemon" commit="24.0.7-0ubuntu2~20.04.1" graphdriver=overlay2 version=24.0.7
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.269864906-03:00" level=info msg="Daemon has completed initialization"
+Jul 07 20:18:23 IdeaPad-3i dockerd[92259]: time="2024-07-07T20:18:23.405869769-03:00" level=info msg="API listen on /run/docker.sock"
+Jul 07 20:18:23 IdeaPad-3i systemd[1]: Started Docker Application Container Engine.
