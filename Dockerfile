@@ -4,7 +4,7 @@ WORKDIR /home/app
 
 COPY . ./
 
-RUN NPM I
+RUN npm install
 
 EXPOSE 3333
 
