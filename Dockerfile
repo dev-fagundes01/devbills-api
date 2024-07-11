@@ -2,11 +2,9 @@ FROM node:18-alpine
 
 WORKDIR /home/app
 
-COPY package*.json ./
+COPY . ./
 
 RUN npm i
-
-COPY . ./
 
 EXPOSE 3333
 

@@ -9,7 +9,8 @@ export async function setupMongo(): Promise<void> {
 		console.log("🎲 connecting to db...");
 		await mongoose.connect(process.env.MONGO_URL as string);
 		console.log("✅ db connected");
-	} catch {
+	} catch (err) {
+		console.log(err);
 		throw new Error("❌ db not connected.");
 	}
 }
