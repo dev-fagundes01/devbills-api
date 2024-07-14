@@ -9,7 +9,7 @@
 # Dados de saldo com filtros    
     1 por período (inicio e fim) 
     
-# Criar categorias    
+# Criar categorias (DONE)  
     1 nome, cor    
     2 não é possível criar categorias com o mesmo nome
     

@@ -10,7 +10,10 @@ export class CategoriesService {
 		const foundCategory = await this.categoriesRepository.findByTitle(title);
 
 		if (foundCategory) {
-			throw new AppError(`Category with title ${title} already exists.`, StatusCodes.BAD_REQUEST);
+			throw new AppError(
+				`Category with title ${title} already exists.`,
+				StatusCodes.BAD_REQUEST,
+			);
 		}
 
 		const category = new Category({
@@ -21,5 +24,11 @@ export class CategoriesService {
 		const createdCategory = await this.categoriesRepository.create(category);
 
 		return createdCategory;
+	}
+
+	async index(): Promise<Category[]> {
+		const categories = await this.categoriesRepository.index();
+
+		return categories;
 	}
 }

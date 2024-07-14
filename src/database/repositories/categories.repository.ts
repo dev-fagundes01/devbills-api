@@ -6,14 +6,20 @@ export class CategoriesRepository {
 
 	async create({ title, color }: Category): Promise<Category> {
 		const createdCategory = await this.model.create({ title, color });
-		console.log('Created Category:', createdCategory)
+		console.log("Created Category:", createdCategory);
 		return createdCategory.toObject<Category>();
-
 	}
 
 	async findByTitle(title: string): Promise<Category | undefined> {
-		const category = await this.model.findOne({title})
+		const category = await this.model.findOne({ title });
 
 		return category?.toObject<Category>();
+	}
+
+	async index(): Promise<Category[]> {
+		const categories = await this.model.find();
+		const categoriesMap = categories.map((item) => item.toObject<Category>());
+
+		return categoriesMap;
 	}
 }
