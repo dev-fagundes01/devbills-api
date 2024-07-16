@@ -15,7 +15,7 @@ export class CategoriesController {
 
 			const result = await this.categoriesService.create({ title, color });
 
-			return res.status(201).json(result);
+			return res.status(StatusCodes.CREATED).json(result);
 		} catch (error) {
 			next(error);
 		}

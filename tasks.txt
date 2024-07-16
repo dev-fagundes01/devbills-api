@@ -8,8 +8,6 @@
 # Dados de saldo com filtros    
     1 por período (inicio e fim) 
     
-# Criar transações    
-    1 id categorias, nome, valor, data e tipo
     
 # Listar as transações com filtros    
     1 por nome    
@@ -23,3 +21,6 @@
     2 não é possível criar categorias com o mesmo nome
 
 # Lista as categorias (DONE)
+
+# Criar transações   (DONE) 
+    1 id categorias, nome, valor, data e tipo
