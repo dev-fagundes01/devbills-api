@@ -1,10 +1,13 @@
 import type { NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
+import type {
+	CreateTransactionsDTO,
+	IndexTransactionsDTO,
+} from "../dtos/transactions.dto";
 import type { TransactionsService } from "../services/transactions.service";
-import type { CreateTransactionsDTO } from "../dtos/transactions.dto";
 
 export class TransactionsController {
-	constructor(private categoriesService: TransactionsService) {}
+	constructor(private transactionsService: TransactionsService) {}
 	create = async (
 		req: Request<unknown, unknown, CreateTransactionsDTO>,
 		res: Response,
@@ -13,11 +16,38 @@ export class TransactionsController {
 		try {
 			const { title, amount, categoryId, date, type } = req.body;
 
-			const result = await this.categoriesService.create({ title, amount, categoryId, date, type });
+			const result = await this.transactionsService.create({
+				title,
+				amount,
+				categoryId,
+				date,
+				type,
+			});
 
 			return res.status(StatusCodes.CREATED).json(result);
 		} catch (error) {
 			next(error);
 		}
-	}
+	};
+
+	index = async (
+		req: Request<unknown, unknown, unknown, IndexTransactionsDTO>,
+		res: Response,
+		next: NextFunction,
+	) => {
+		try {
+			const { title, categoryId, beginDate, endDate } = req.query;
+
+			const result = await this.transactionsService.index({
+				title,
+				categoryId,
+				beginDate,
+				endDate,
+			});
+
+			return res.status(StatusCodes.OK).json(result);
+		} catch (error) {
+			next(error);
+		}
+	};
 }

@@ -11,3 +11,13 @@ export const createTransactionsSchema = {
 
 const createTransactionsObject = z.object(createTransactionsSchema);
 export type CreateTransactionsDTO = z.infer<typeof createTransactionsObject>;
+
+export const indexTransactionsSchema = {
+	title: z.string().optional(),
+  categoryId: z.string().length(24).optional(),
+  beginDate: z.coerce.date().optional(),
+  endDate: z.coerce.date().optional(),
+}
+
+const indexTransactionsObject = z.object(indexTransactionsSchema);
+export type IndexTransactionsDTO = z.infer<typeof indexTransactionsObject>;

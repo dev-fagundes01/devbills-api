@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { createTransactionsSchema } from "../dtos/transactions.dto";
-import { ParamsType, validator } from "../middleware/validator.middleware";
 import { TransactionsController } from "../controllers/transactions.controller";
+import { createTransactionsSchema } from "../dtos/transactions.dto";
 import { TransactionsFactory } from "../factories/transactions.factory";
+import { ParamsType, validator } from "../middleware/validator.middleware";
 
 export const transactionsRoutes = Router();
 
@@ -19,3 +19,5 @@ transactionsRoutes.post(
 	}),
 	controller.create,
 );
+
+transactionsRoutes.get("/", controller.index);

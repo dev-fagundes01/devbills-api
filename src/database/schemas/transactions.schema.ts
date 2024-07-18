@@ -6,7 +6,7 @@ const TransactionSchema = new mongoose.Schema(
 		title: String,
 		amount: Number,
 		type: String,
-		data: Date,
+		date: Date,
 		category: CategorySchema,
 	},
 	{ versionKey: false },
