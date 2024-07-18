@@ -8,13 +8,12 @@
 # Dados de saldo com filtros    
     1 por período (inicio e fim) 
     
+----------------------------------------------------------------
     
 # Listar as transações com filtros    
     1 por nome    
     2 por período (inicio e fim)    
     3 por categoria
-
-----------------------------------------------------------------
 
 # Criar categorias (DONE)  
     1 nome, cor    
