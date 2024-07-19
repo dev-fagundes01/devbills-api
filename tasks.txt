@@ -1,14 +1,14 @@
 
 # Dados de balanço com filtros    
-    1 por ano
+    por ano
+
+----------------------------------------------------------------
     
 # Dados de despesas por categoria com filtros    
     1 por período 
-    
+
 # Dados de saldo com filtros    
     1 por período (inicio e fim) 
-    
-----------------------------------------------------------------
     
 # Listar as transações com filtros    
     1 por nome    
