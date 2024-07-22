@@ -8,5 +8,73 @@
 		"rules": {
 			"recommended": true
 		}
-	}
+	},
+	"parser": {
+		"typescript": true,
+		"json": true,
+		"css": true,
+		"html": true
+	},
+	"rules": {
+		"format": {
+			"enabled": true,
+			"printWidth": 80,
+			"tabWidth": 2,
+			"useTabs": false,
+			"semi": true,
+			"singleQuote": true,
+			"trailingComma": "es5",
+			"bracketSpacing": true,
+			"jsxBracketSameLine": false,
+			"arrowParens": "always"
+		},
+		"lint": {
+			"enabled": true,
+			"noUnusedVars": [
+				"error",
+				{
+					"vars": "all",
+					"args": "after-used",
+					"ignoreRestSiblings": true
+				}
+			],
+			"noExplicitAny": [
+				"warn"
+			],
+			"preferConst": [
+				"error"
+			],
+			"noVar": [
+				"error"
+			],
+			"eqeqeq": [
+				"error",
+				"always"
+			],
+			"curly": [
+				"error",
+				"all"
+			],
+			"quotes": [
+				"error",
+				"single",
+				{
+					"avoidEscape": true
+				}
+			],
+			"semi": [
+				"error",
+				"always"
+			],
+			"commaDangle": [
+				"error",
+				"always-multiline"
+			]
+		}
+	},
+	"ignore": [
+		"node_modules",
+		"dist",
+		"build"
+	]
 }
