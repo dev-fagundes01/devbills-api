@@ -26,6 +26,8 @@ services:
       - '3333:3333'
     networks:
       - local
+    env_file:
+        - .env
 
 networks:
   local:
