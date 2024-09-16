@@ -17,7 +17,7 @@ setupMongo().then(() => {
 	const port = process.env.PORT || 3333;
 
 	app.use(cors(corsOptions
-		// origin: process.env.FRONT_URL,
+		// {origin: process.env.FRONT_URL}
 	))
 	app.use(json());
 	app.use(routes);

@@ -10,6 +10,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 'pass123'
     ports:
       - '27017:27017'
+    volumes:
+      - ./mongod.conf:/etc/mongo/mongod.conf   # Monta o arquivo de configuração
+    command: mongod --config /etc/mongo/mongod.conf  # Usar arquivo de configuração
     networks:
       - local
   
