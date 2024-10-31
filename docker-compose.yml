@@ -15,7 +15,7 @@ services:
     command: mongod --config /etc/mongo/mongod.conf  # Usar arquivo de configuração
     networks:
       - local
-  
+
   app:
     depends_on:
       - mongo
@@ -30,7 +30,8 @@ services:
     networks:
       - local
     env_file:
-        - .env
+      - .env
+    command: npm run dev  # Comando para iniciar a aplicação Node.js
 
 networks:
   local:
